@@ -1,0 +1,132 @@
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: lighter;
+  }
+  /* // <uniquifier>: Use a unique and descriptive class name
+  // <weight>: Use a value from 100 to 400 */
+  
+  .playwrite-gb-s-uniquifier {
+    font-family: "Playwrite GB S", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+  }
+  /* // <uniquifier>: Use a unique and descriptive class name
+  // <weight>: Use a value from 400 to 700 */
+  
+  .dynapuff-uniquifier{
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+  }
+  
+  .edu-au-vic-wa-nt-pre-uniquifier {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight:bold;
+  }
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  @media screen and (min-width:1322px){
+    
+    }
+    @media screen and (min-width:1020px) and (max-width:1321px){
+    
+    }
+    @media screen and (min-width:768px) and (max-width:1020px){
+     
+    }
+    
+    @media screen and (max-width:767px){
+    
+    }
+    
+  /* //////////////////////////////////Home/////////////////////////////////////// */
+  
+  .element {
+    position: relative;
+    border-top: 14px solid rgba(241, 241, 241, 0.1); /* Regular border */
+    box-shadow: 0 -14px 8px rgba(223, 222, 222, 0.2); /* Blur effect */
+  }
+  .element1 {
+    position: relative;
+    border-bottom: 14px solid rgba(241, 241, 241, 0.1); /* Regular border */
+    box-shadow: 0 -14px 8px rgba(223, 222, 222, 0.2); /* Blur effect */
+  }
+  @keyframes scrollY {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-100%); /* Move up the entire height of the cards */
+    }
+  }
+  .iqQRDx{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+  }
+  .jUpmFm {
+    height: 700px; /* Set the container height to be the same as the height of the visible section */
+    overflow: hidden;
+    }
+  
+  .hODLEd {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    gap: 1.5rem;
+    animation: 70000ms linear 0s infinite normal none running scrollY;
+    transition: animation-duration 2s;
+}
+  
+  .DZnWz {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+    gap: 1rem;
+    padding: 2rem;
+    border: 1px solid grey;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    height: 100%; /* Height of each card */
+  } 
+  /*///////////////// LoginAdmin ///////////////////////////////////*/
+  
+  .css-1dfcyzw-MuiPaper-root-MuiPopover-paper{
+    overflow-y:hidden !important ;
+    min-width: 0px !important;
+    min-height: 0px !important;
+   }
+  /* Adjust for any required card spacing or visual effects */
+  
+  @media screen and (min-width:386px) and (max-width:630px){
+    .home-h1{
+     padding: 0px 30px;}
+  }
+  @media screen and (min-width:1025px) and (max-width:1065px){
+    .homesvg{
+      padding:50px 90px 0px !important;
+    }
+     
+  }
+  @media screen and (min-width:1024px) and (max-width:1203px){
+    .prop-width{
+      width: 95% !important;
+    }
+    .prop-h3{
+      font-size: 20px !important;
+    }
+    .prop-pt{
+      padding-top: 20px !important;
+    }
+  }
