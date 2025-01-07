@@ -7,5 +7,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',  // or use your local IP (e.g., '192.168.x.x')
     port: 3000,       // Or whatever port your Vite server uses
-  }
+  },
+  base: '/AbdulRehman/',  // Add this line
 })

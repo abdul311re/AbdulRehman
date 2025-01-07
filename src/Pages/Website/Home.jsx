@@ -5,7 +5,7 @@ import Proposal from "../../Components/Home/Proposal";
 import Curve from "../../Assets/Curve-white.svg";
 // import Tick from "../../Assets/Tick/Tick.png";
 import Pk from "../../Assets/pk.png";
-import Login from "../../Components/AdminLogin/Login";
+// import Login from "../../Components/AdminLogin/Login";
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
