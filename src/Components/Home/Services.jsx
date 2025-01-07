@@ -33,7 +33,7 @@ const Deiv= styled.div`
 }
 .splide__arrow svg{
     font-size: 15rem;
-    fill:#C0392B;
+    fill:black;
 }
 }
 @media screen and (min-width:1020px) and (max-width:1321px){
@@ -61,7 +61,7 @@ const Deiv= styled.div`
 }
 .splide__arrow svg{
     font-size: 15rem;
-    fill:#C0392B;
+    fill:black;
 }
 }
 @media screen and (min-width:768px) and (max-width:1020px){
@@ -89,7 +89,7 @@ const Deiv= styled.div`
 }
 .splide__arrow svg{
     font-size: 15rem;
-    fill:#C0392B;
+    fill:black;
 }
 }
 
@@ -116,7 +116,7 @@ const Deiv= styled.div`
 }
 .splide__arrow svg{
     font-size: 15rem;
-    fill:#C0392B;
+    fill:black;
 }
 }
 
