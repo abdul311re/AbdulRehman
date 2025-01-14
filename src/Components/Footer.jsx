@@ -5,7 +5,7 @@ function Footer (){
         <div className='flex flex-col items-center justify-centers py-12 '>
             <div><p className='text-white text-sm py-1'>Let s Bring Your Project Ideas to Life!</p></div>
             <div><h3 className='text-white font-bold text-5xl dynapuff-uniquifier pt-3'>Let s do this!</h3></div>
-            <div className='mt-3'><Button variant="contained" disableElevation  className='!bg-purple hover:!bg-red text-white hover:text-charcoal hover:font-bold' >
+            <div className='mt-3'><Button variant="contained" disableElevation  className='!bg-purple  text-white  hover:font-bold' >
             Let’s collaborate
             </Button></div>
         </div>

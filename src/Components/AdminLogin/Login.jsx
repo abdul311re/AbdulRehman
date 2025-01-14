@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import Button from '@mui/material/Button';
+import axios from "axios";
 import "../../App.css";
 
 function Login() {
@@ -20,6 +21,24 @@ function Login() {
     newAnchorEl[index] = null;
     setAnchorEl(newAnchorEl);
   };
+  const [values, setValues] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(values);
+
+    axios.post("http://localhost:3006/register", {
+        username: values.username,
+        password: values.password,
+      })
+      
+      .then((res) => console.log(res.data))
+      .catch((err) => console.error(err));
+  };
+
   return (
     <>
     <div>
@@ -49,13 +68,21 @@ function Login() {
             <div className='bg-black w-5/6 md:w-2/3 lg:w-1/4 rounded-2xl p-8'>
             <h3 className='text-purple font-bold text-5xl dynapuff-uniquifier text-center'>Login</h3>
             <div className='flex flex-col items-center justify-center'>
-              <form className='pt-5 pb-5'>
+              <form onSubmit={handleSubmit} className='pt-5 pb-5'>
               <div><p className='text-white'>Admin</p></div>
-              <div><input type="text"  placeholder='Admin' className='rounded px-2 py-1'/></div>
-              <div className='mt-5'><p className='text-white'>Password</p></div>
-              <div><input type="text" placeholder='Password' className='rounded px-2 py-1'/></div>
+              <div><input type="text"
+                  id="username"
+                  onChange={(e) =>
+                    setValues({ ...values, username: e.target.value })
+                  }  placeholder='Admin' className='rounded px-2 py-1'/></div>
+              <div  className='mt-5'><p className='text-white'>Password</p></div>
+              <div><input  type="password"
+                  id="password"
+                  onChange={(e) =>
+                    setValues({ ...values, password: e.target.value })
+                  } placeholder='Password' className='rounded px-2 py-1'/></div>
               <div className='flex items-center justify-center mt-5'>
-              <Button className='!bg-purple !text-white !px-5'><p className=''>Submit</p></Button></div>
+              <Button  type="submit" className='!bg-purple !text-white !px-5'><p className=''>Submit</p></Button></div>
               </form>
               </div>
             </div>
