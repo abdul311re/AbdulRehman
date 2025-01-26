@@ -1,7 +1,7 @@
 import Svg from "../../Components/Home/Svg";
 import Services from "../../Components/Home/Services";
 import Proposal from "../../Components/Home/Proposal";
-// import About from "../../Components/Home/Homeabout";
+import About from "../../Components/Home/Homeabout";
 import Curve from "../../Assets/Curve-white.svg";
 // import Tick from "../../Assets/Tick/Tick.png";
 import Pk from "../../Assets/pk.png";
@@ -64,10 +64,9 @@ function Home (){
       <Proposal />
      </section>
      {/* ////////////////////////////////HomeAbout Component////////////////////////////////// */}
-     {/* <section className="bg-Hex element py-10 w-full">
+     <section className="bg-Hex element py-10 w-full">
      <About/>
      </section>
-     <section><Login/></section> */}
     </>)
 }
 export default Home;

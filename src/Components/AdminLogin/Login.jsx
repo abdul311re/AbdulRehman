@@ -30,9 +30,11 @@ function Login() {
     e.preventDefault();
     console.log(values);
 
-    axios.post("http://localhost:3006/register", {
+    axios
+      .post("http://localhost:3004/api/register", {
         username: values.username,
         password: values.password,
+        
       })
       
       .then((res) => console.log(res.data))
@@ -83,6 +85,7 @@ function Login() {
                   } placeholder='Password' className='rounded px-2 py-1'/></div>
               <div className='flex items-center justify-center mt-5'>
               <Button  type="submit" className='!bg-purple !text-white !px-5'><p className=''>Submit</p></Button></div>
+           
               </form>
               </div>
             </div>
