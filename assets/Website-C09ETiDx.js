@@ -1,0 +1,1 @@
+import{j as i}from"./index-52RWbhpx.js";function s(){return i.jsx(i.Fragment,{children:i.jsx("p",{children:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente impedit sit iusto. Nemo ad ipsum ullam veritatis possimus vel nisi modi obcaecati, necessitatibus temporibus suscipit eos assumenda dolores autem vero."})})}export{s as default};
