@@ -315,7 +315,7 @@ export default function Header() {
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex">
-                 <img src={Product} alt="#" style={{width:"25px" ,height:"auto"}} /><span className='px-3'>Portfolio</span>
+                 <img src={Product} alt="#" style={{width:"25px" ,height:"auto"}} /><span className='px-3'><Link to="/Portfolio">Portfolio</Link></span>
                 </a>
                 <a
                   href="#"

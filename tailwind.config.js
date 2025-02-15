@@ -42,6 +42,10 @@ export default {
         '50rem' :'50rem',
         '20rem' : '20rem',
       },
+      screens:{
+        xs:'414px',
+        xss:'330px',
+      },
     },
   },
   plugins: [],
