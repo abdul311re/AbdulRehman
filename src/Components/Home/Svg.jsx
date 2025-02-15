@@ -22,6 +22,9 @@ const Styledcol = styled.div`
   align-items: center;
   justify-content: center;
 
+ .stylelap{
+    stroke-width: 0.5;
+ }
 `;
 
 
@@ -31,7 +34,7 @@ function Svg() {
    <container className="row flex flex-wrap ">
     <div className="lg:basis-1/5 md:basis-1/5  basis-1/2  lg:w-full w-32 h-32 lg:h-full flex flex-col items-center justify-center border-r-gray-950 border-b-gray-950 border-r border-b lg:py-8 py-0">
      <Styledcol >
-     <div><img src={ShopSvg} className="lg:w-16 w-12 h-full stylelap"/></div>
+     <div><img src={ShopSvg} className="lg:w-16 w-12 h-full stylelap "/></div>
      <div><p className="stylep dynapuff-uniquifier pt-2">Ecommerce</p></div></Styledcol>
      </div>
      <div className="lg:basis-1/5 md:basis-1/5 basis-1/2 lg:w-full w-32 h-32 lg:h-full flex flex-col items-center justify-center   lg:border-r-gray-950  md:border-r-gray-950 border-b-gray-950 lg:border-r md:border-r border-b lg:py-8 py-0">

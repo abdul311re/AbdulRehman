@@ -1,13 +1,14 @@
 // src/Routes/Webroute.jsx
 import  { Suspense, lazy } from 'react';
-import { Routes, Route , Navigate} from 'react-router-dom';
-
+import { Routes, Route , Navigate  } from 'react-router-dom';
 const Firstpage = lazy(() => import('../Pages/Career/Firstpage.jsx'));
 const Secondpage = lazy(() => import('../Pages/Career/Secondpage.jsx'));
 const Home = lazy(() => import('../Pages/Website/Home.jsx'))
 const Website = lazy(() => import('../Pages/Website/Website.jsx'));
+const Portfolio = lazy(() => import('../Pages/Portfolio.jsx'));
 
 const WebRoutes = () => {
+
   return (
     <Suspense
       fallback={
@@ -26,10 +27,11 @@ const WebRoutes = () => {
         <Route path="/first" element={<Firstpage />} />
         <Route path="/second/:id" element={<Secondpage />} /> {/* Changed 'component' to 'element' */}
         <Route path='/Website' element={<Website />} />
+        <Route path='/Portfolio' element={<Portfolio />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
-  );
+);
 };
 
 export default WebRoutes;

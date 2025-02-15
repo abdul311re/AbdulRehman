@@ -13,7 +13,9 @@ export default {
         black: "#000000",
         white: "#FFFFFF",
         grey: "#F3F4F0",
-        Hex: "#f6f8fa"
+        Hex: "#f6f8fa",
+        bgport:"#201e1e",
+        
       },
       margin: {
         '-50': '-50px',

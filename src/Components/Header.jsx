@@ -156,11 +156,19 @@ export default function Header() {
               className="fixed top-16 left-0  z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5  transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in" 
              
             >
-              <div className="p-4">
+              <div className="p-4 flex  ">
+                <div>
+              <img alt=""
+              src={Arlogo}
+              className=" h-16 sm:h-16 lg:h-full w-auto  "
+            /></div>
+                <div className="flex flex-wrap  lg:w-full mx-5">
                 {Services.map((item) => (
                   <Link to={item.Route} 
                   onClick ={handleClick}
                   key={item.name}
+                  className="group relative flex items-center gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 w-full md:w-6/12"
+      
                  >
                   <div
                     key={item.name}
@@ -179,6 +187,7 @@ export default function Header() {
                   </div>
                   </Link>
                 ))}
+                </div>
               </div>
               <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 ">
                 {callsToAction.map((item) => (
@@ -197,9 +206,9 @@ export default function Header() {
           <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
             About Us
           </a>
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
+          <Link to="/Portfolio" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Portfolio
-           </a>
+           </Link>
            <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Blog
            </a>

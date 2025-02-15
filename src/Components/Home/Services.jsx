@@ -170,7 +170,7 @@ function Services(){
         </SplideSlide>
         <SplideSlide className="rounded-t-2xl rounded-b-2xl my-5 bg-Hex px-6 py-6">
           <Link to="/website-development" className="text-decoration-none">
-          <img src={Mobile}  className=" h-16 sm:h-16 lg:h-14 w-auto Ser-svg"
+          <img src={Mobile}  className=" h-16 sm:h-16 lg:h-14 w-auto Ser-svg "
             />
               <h3 className="text-black font-bold text-start mt-auto !text-2xl text-charcoal 
                 dynapuff-uniquifier  pt-2 pb-4">
