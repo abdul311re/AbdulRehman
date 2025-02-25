@@ -1,14 +1,11 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState,useEffect } from 'react'
 import {
   Dialog,
   DialogPanel,
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
-  PopoverButton,
   PopoverGroup,
-  PopoverPanel,
 } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -18,7 +15,8 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
+import Sasuke from '../Assets/sasuke.jpg';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Arlogo from '../Assets/ArLogo.png'; 
 import Product from '../Assets/Logo/Product.png';
@@ -27,6 +25,7 @@ import About from '../Assets/Logo/aboutus.svg';
 import Service from '../Assets/Logo/services.svg';
 import { Link } from "react-router-dom";
 import Login from "./AdminLogin/Login";
+import { useLocation } from "react-router-dom";
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', path: '/first', icon: ChartPieIcon },
   { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -48,50 +47,26 @@ const callsToAction = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-  const dropdownRef1 = useRef(null);
-  const [isOpen1, setIsOpen1] = useState(false);
-  
+  const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
+  let timeoutId;
+  const location = useLocation(); // Detect route changes
 
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
-  };
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);  // Close dropdown
-      }
-    };
-    
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [dropdownRef]);
-  
-  
-  const toggleDropdown1 = () => {
-    setIsOpen1((prev) => !prev);
-  };
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef1.current && !dropdownRef1.current.contains(event.target)) {
-        setIsOpen1(false);  // Close dropdown
-      }
-    };
-    
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside );
-    };
-  }, [dropdownRef1]);
+    setOpenDropdown(false); // Close dropdown when route changes
+  }, [location]);
 
-  const handleClick = () => {
-    if (dropdownRef1.current) {
-      dropdownRef1.current.style.display = 'none ' ;
-    }
+  const handleMouseEnter = (dropdown) => {
+    clearTimeout(timeoutId); 
+    setOpenDropdown(dropdown); // Open the hovered dropdown
   };
+// setOpenDropdown(null);add this line 58 for testing 
+  const handleMouseLeave = () => {
+     // Close the dropdown
+    timeoutId = setTimeout(() => {
+      setOpenDropdown(null); // Close the dropdown after a delay
+    }, 300);
+  };
+
   return (
     <header className="bg-white sticky top-0 z-50">
       <nav aria-label="Global" className=" flex  items-center justify-between p-5 lg:px-20 md:px-10 ">
@@ -142,30 +117,33 @@ export default function Header() {
           <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Home
           </a>
-          <Popover className="relative">
-            <PopoverButton  onClick={toggleDropdown1}  className="flex items-center text-base  font-semibold leading-6 text-gray-900 py-1   border-none outline-none gap-x-1">
+          <div className="relative" onMouseEnter={() => handleMouseEnter('services')}
+            onMouseLeave={handleMouseLeave} 
+      >
+        <div >
+            <div   className="flex items-center text-base  font-semibold leading-6 text-gray-900 py-1   border-none outline-none gap-x-1 cursor-pointer"  >
             Services
-              <ChevronDownIcon aria-hidden="true"  className={`h-5 w-5 flex-none text-gray-400 transition-transform duration-300 ${
-            isOpen1 ? 'rotate-180' : 'rotate-0' 
-          }`} />
-            </PopoverButton >
-
-            <PopoverPanel
-             ref={dropdownRef1}
-              transition
-              className="fixed top-16 left-0  z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5  transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in" 
+              <ChevronDownIcon aria-hidden="true"  className={`h-5 w-5 flex-none text-gray-400 transition-transform duration-300  ${
+                  openDropdown === 'services' ? 'rotate-180' : 'rotate-0'
+                }`}></ChevronDownIcon>
+            </div >
+             {openDropdown === 'services' &&(
+            <div  
+            onMouseEnter={() => handleMouseEnter('services')}
+            onMouseLeave={handleMouseLeave}
+              className={`fixed top-16 left-0 z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5 transition-transform duration-200`}
              
             >
-              <div className="p-4 flex  ">
+              <div className=" px-16 flex  ">
                 <div>
-              <img alt=""
-              src={Arlogo}
-              className=" h-16 sm:h-16 lg:h-full w-auto  "
+              <img alt="Black"
+              src={Sasuke}
+              className=" h-16 sm:h-16 lg:h-full w-72  "
             /></div>
                 <div className="flex flex-wrap  lg:w-full mx-5">
                 {Services.map((item) => (
                   <Link to={item.Route} 
-                  onClick ={handleClick}
+                 
                   key={item.name}
                   className="group relative flex items-center gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 w-full md:w-6/12"
       
@@ -201,8 +179,10 @@ export default function Header() {
                   </a>
                 ))}
               </div>
-            </PopoverPanel>
-          </Popover>
+            </div>
+            )}
+            </div>
+          </div>
           <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
             About Us
           </a>
@@ -212,24 +192,32 @@ export default function Header() {
            <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Blog
            </a>
-          <Popover className="relative" ref={dropdownRef}>
-            <PopoverButton  onClick={toggleDropdown}  className="flex items-center  text-base  font-semibold leading-6 text-gray-900 py-1   border-none outline-none gap-x-1">
+          <div className="relative"  
+            onMouseEnter={() => handleMouseEnter('insight')}
+            onMouseLeave={handleMouseLeave}
+        >
+            <div   className="flex items-center  text-base  font-semibold leading-6 text-gray-900 py-1   border-none outline-none gap-x-1 cursor-pointer" >
              Insight
-              <ChevronDownIcon aria-hidden="true"  className={`h-5 w-5 flex-none text-gray-400 transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : 'rotate-0' 
-          }`} />
-            </PopoverButton >
-            <PopoverPanel
-            ref={dropdownRef1}
-              transition
-              className="fixed top-16 left-0  z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5  transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in" 
-             
+             <ChevronDownIcon aria-hidden="true"  className={`h-5 w-5 flex-none text-gray-400 transition-transform duration-300 ${
+                  openDropdown === 'insight' ? 'rotate-180' : 'rotate-0'
+                }`}></ChevronDownIcon>
+            </div >
+             {openDropdown === 'insight' &&( <div
+            onMouseEnter={() => handleMouseEnter('insight')}
+            onMouseLeave={handleMouseLeave}
+             className={`fixed top-16 left-0 z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5 transition-transform duration-200`}
             >
-              <div className="p-4">
+               <div className="py-4 px-16 flex  ">
+                <div>
+              <img alt="Black"
+              src={Sasuke}
+              className=" h-16 sm:h-16 lg:h-full w-72  "
+            /></div>
+              <div className="flex flex-wrap  lg:w-full mx-5">
                 {products.map((item) => (
                   <Link to={item.path} 
                   key={item.name}
-                  onClick ={handleClick}>  
+                 >  
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -260,8 +248,9 @@ export default function Header() {
                   </a>
                 ))}
               </div>
-            </PopoverPanel>
-          </Popover>
+              </div>
+            </div>)}
+            </div>
         <Login/>
         </PopoverGroup>
       </nav>

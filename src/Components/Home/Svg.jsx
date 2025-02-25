@@ -40,7 +40,7 @@ function Svg() {
      <div className="lg:basis-1/5 md:basis-1/5 basis-1/2 lg:w-full w-32 h-32 lg:h-full flex flex-col items-center justify-center   lg:border-r-gray-950  md:border-r-gray-950 border-b-gray-950 lg:border-r md:border-r border-b lg:py-8 py-0">
      <Styledcol >
      <div><img src={IdSvg} className="lg:w-16 w-12 h-full stylelap"/></div>
-     <div><p className="stylep dynapuff-uniquifier pt-2 text-center lg:text-start">Social Networking</p></div>
+     <div><p className="stylep dynapuff-uniquifier pt-2 text-center lg:text-start truncate w-[90px] xl:whitespace-normal xl:overflow-visible xl:w-[100%]" >Social Networking</p></div>
      </Styledcol>
      </div>
      <div className="lg:basis-1/5 md:basis-1/5  basis-1/2 lg:w-full w-32 h-32 lg:h-full flex flex-col items-center  justify-center border-r-gray-950 border-b-gray-950 border-r border-b lg:py-8 py-0">
@@ -64,7 +64,7 @@ function Svg() {
      <div className="lg:basis-1/5 md:basis-1/5  basis-1/2 lg:w-full w-32 h-32 lg:h-full  flex flex-col items-center justify-center lg:border-r-gray-950  md:border-r-gray-950 border-b-gray-950 lg:border-r md:border-r border-b py-8 md:py-6">
      <Styledcol >
      <div><img src={FlightSvg} className="lg:w-16 w-12 h-full stylelap"/></div>
-     <div><p className="stylep dynapuff-uniquifier pt-2 text-center lg:text-start">Travel & Tourism</p></div>
+     <div><p className="stylep dynapuff-uniquifier pt-2 text-center lg:text-start truncate w-[90px] xl:whitespace-normal xl:overflow-visible xl:w-[100%]">Travel & Tourism</p></div>
      </Styledcol>
      </div>
      <div className="lg:basis-1/5 md:basis-1/5  basis-1/2 lg:w-full w-32 h-32 lg:h-full flex flex-col items-center justify-center border-r-gray-950 border-b-gray-950 border-r border-b py-8 md:py-6">
@@ -94,7 +94,7 @@ function Svg() {
      <div className="lg:basis-1/5 md:basis-1/5  basis-1/2 lg:w-full w-32 h-32 lg:h-full flex flex-col items-center justify-center border-r-gray-950 border-r lg:border-b-0 md:border-b-0 border-b-gray-950 border-b py-8 md:py-6">
      <Styledcol >
      <div><img src={SuperSvg} className="lg:w-16 w-12 h-full stylelap"/></div>
-     <div><p className="stylep dynapuff-uniquifier pt-2 text-center lg:text-start">IT Staff Augmentation</p></div>
+     <div><p className="stylep dynapuff-uniquifier pt-2 text-center lg:text-start truncate w-[90px] xl:whitespace-normal xl:overflow-visible xl:w-[100%]">IT Staff Augmentation</p></div>
      </Styledcol>
      </div>
      <div className="lg:basis-1/5 md:basis-1/5  basis-1/2 lg:w-full w-32 h-32 lg:h-full flex flex-col items-center justify-center lg:border-r-gray-950  lg:border-r  md:border-r-gray-950  md:border-r  lg:border-b-0 md:border-b-0 border-b-gray-950 border-b py-8 md:py-6">
