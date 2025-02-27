@@ -25,7 +25,7 @@ export function Hometab() {
       </TabsList>
       <TabsContent value="account" >
         <Card >
-          <CardHeader >
+          <CardHeader>
             <CardTitle>Account</CardTitle>
             <CardDescription>
               Make changes to your account here. Click save when youre done.

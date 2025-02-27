@@ -274,8 +274,10 @@ export default function Header() {
                     {[...Services, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
-                        as="a"
-                        href={item.href}
+                        as={Link}
+                        to={item.Route}
+                         // Close dropdown on click
+                         onClick={() => setMobileMenuOpen(false)}
                         className="block rounded-lg pt-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
