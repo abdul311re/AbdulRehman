@@ -105,6 +105,18 @@
     text-decoration: none;
     height: 100%; /* Height of each card */
   } 
+  .scrollable-element {
+    overflow: auto;
+    scrollbar-color: #34495E #f1f1f1;
+    scrollbar-width: thin;
+  }
+  .scrollable-element::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollable-element::-webkit-scrollbar-button {
+    display: none !important; /* Hides the arrows in WebKit browsers */
+  }
+
   /*///////////////// LoginAdmin ///////////////////////////////////*/
   
   .css-1dfcyzw-MuiPaper-root-MuiPopover-paper{
