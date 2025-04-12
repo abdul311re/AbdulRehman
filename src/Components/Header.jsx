@@ -17,6 +17,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Sasuke from '../Assets/sasuke.jpg';
+import Sasuke1 from '../Assets/sasuke1.png';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Arlogo from '../Assets/ArLogo.png'; 
 import Product from '../Assets/Logo/Product.png';
@@ -183,9 +184,9 @@ export default function Header() {
             )}
             </div>
           </div>
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
+          <Link to="/Aboutus" className="text-base font-semibold leading-6 text-gray-900 py-1">
             About Us
-          </a>
+          </Link>
           <Link to="/Portfolio" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Portfolio
            </Link>
@@ -210,19 +211,19 @@ export default function Header() {
                <div className="py-4 px-16 flex  ">
                 <div>
               <img alt="Black"
-              src={Sasuke}
-              className=" h-16 sm:h-16 lg:h-full w-72  "
+              src={Sasuke1}
+              className=" h-16 sm:h-16 lg:h-full w-52  "
             /></div>
-              <div className="flex flex-wrap  lg:w-full mx-5">
+              <div className="flex flex-wrap lg:w-full mx-5 ">
                 {products.map((item) => (
                   <Link to={item.path} 
                   key={item.name}
                  >  
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 w-[485px] rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
-                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white ">
                       <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto ">
@@ -234,18 +235,6 @@ export default function Header() {
                     </div>
                   </div>
                   </Link>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 ">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 "
-                  >
-                    <item.icon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
-                    {item.name}
-                  </a>
                 ))}
               </div>
               </div>
@@ -312,7 +301,7 @@ export default function Header() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex"
                 >
-                  <img src={About} alt="#" style={{width:"25px" ,height:"auto", }}  /><span className='px-3'>About Us</span>
+                  <img src={About} alt="#" style={{width:"25px" ,height:"auto", }}  /><span className='px-3'><Link to="/Aboutus">About Us</Link></span>
                 </a>
                 <a
                   href="#"

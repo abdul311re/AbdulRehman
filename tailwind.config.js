@@ -90,7 +90,10 @@ export default {
       screens: {
         xs: '414px',
         xms: '390px'
-      }
+      },
+      boxShadow: {
+        'custom-glow': '0px 0px 60px rgba(255, 255, 255, 0.4)',
+      },
     }
   },
   plugins: [animate],

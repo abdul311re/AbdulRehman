@@ -107,8 +107,8 @@
   } 
   .scrollable-element {
     overflow: auto;
-    scrollbar-color: #34495E #f1f1f1;
-    scrollbar-width: thin;
+    scrollbar-color: #34495E #f1f1f1 !important;
+    scrollbar-width: thin !important;
   }
   .scrollable-element::-webkit-scrollbar {
     width: 6px;
@@ -116,6 +116,7 @@
   .scrollable-element::-webkit-scrollbar-button {
     display: none !important; /* Hides the arrows in WebKit browsers */
   }
+
 
   /*///////////////// LoginAdmin ///////////////////////////////////*/
   
@@ -147,3 +148,15 @@
       padding-top: 20px !important;
     }
   }
+  .circle-animations_circle-2__rNBrP {
+    animation: circle-animations_rotate-counter-clockwise__VbycT 10s ease-in-out infinite;
+    transform-origin: 48% 56%;
+}
+@keyframes circle-animations_rotate-counter-clockwise__VbycT {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
