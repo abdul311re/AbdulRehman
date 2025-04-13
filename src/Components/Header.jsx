@@ -81,6 +81,7 @@ export default function Header() {
             />
           </Link>
         </div>
+        
         <div className="flex md:hidden">
         <div>
       {/* Conditionally render Open or Close button */}
@@ -249,11 +250,11 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-              <a
-                  href="#"
+              <Link
+                  to="/" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 pb-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex">
                  <img src={Home} alt="" style={{width:"30px" ,height:"auto" }} /><span className='px-2'> Home </span>
-                </a>
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center   rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   <img src={Service} alt="" style={{width:"25px" ,height:"auto"}} /><span className='px-3'>Services </span>
@@ -292,17 +293,15 @@ export default function Header() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="#"
+                <Link to="/Portfolio"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex">
-                 <img src={Product} alt="#" style={{width:"25px" ,height:"auto"}} /><span className='px-3'><Link to="/Portfolio">Portfolio</Link></span>
-                </a>
-                <a
-                  href="#"
+                 <img src={Product} alt="#" style={{width:"25px" ,height:"auto"}} /><span className='px-3'>Portfolio</span>
+                 </Link>
+                <Link to="/Aboutus" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex"
                 >
-                  <img src={About} alt="#" style={{width:"25px" ,height:"auto", }}  /><span className='px-3'><Link to="/Aboutus">About Us</Link></span>
-                </a>
+                  <img src={About} alt="#" style={{width:"25px" ,height:"auto", }}  /><span className='px-3'>About Us</span>
+                  </Link>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex"
