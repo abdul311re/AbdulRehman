@@ -39,7 +39,7 @@ const Services = [
   { name: 'Wordpress Development', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
   { name: 'Shopify Development', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
   { name: 'Mobile Development', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Software Development', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Software Development', description: 'Build strategic funnels that will convert', Route:'/Software', icon: ArrowPathIcon },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },

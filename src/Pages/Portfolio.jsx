@@ -11,7 +11,7 @@ import Css from "../Assets/Logo/CSS.webp";
 import Node from "../Assets/Logo/Nodejs.svg"
 import burgur from "../Assets/Hamburgur.svg";
 import close from "../Assets/Close.svg";
-function Portfolio (){
+const Portfolio = () =>{
   const [isClose, setIsClose] = useState(false);
 return(<>
  <div className="h-full bg-black flex items-center justify-center lg:p-16  p-4">

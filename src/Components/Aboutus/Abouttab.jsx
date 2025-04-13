@@ -23,6 +23,12 @@ const Styledcol = styled.div`
   left: 0px;
   width: 160px;
 }
+.css-6p016c.Mui-selected {
+    color: purple !important;
+}
+.css-jkmkwa{
+  background-color: purple !important;
+}
 .PrivateTabIndicator-colorSecondary-3{
   background-color: purple !important;
 } 
@@ -39,7 +45,7 @@ const list2=[
     { h3:'Driving Global Change Through Innovative Technology', paragraph1:'Our mission is to push the boundaries of today’s technologies to address real-world challenges, creating solutions that positively impact communities and contribute to a better society.', paragraph2:'We envision improving the lives of 20 million people by enhancing access to quality education and job opportunities. Our goals include acquiring 10 thriving ventures, scaling five businesses to successful exits, achieving Nasdaq listing, becoming the employer of choice in Pakistan, and securing a place in the Fortune 500 within the next five years.', image: Value},
 ]
 const list3=[
-    { h3:'Curiosity', paragraph1:'We foster a culture where team members challenge conventional thinking and seek creative, forward-thinking solutions.', image: Value ,h31:'Integrity', paragraph11:'Transparency and ethical conduct form the foundation of our relationships, both within our organization and with our clients.',h32:'Optimism', paragraph12:'We believe a positive mindset fuels creativity, enhances productivity, and cultivates a fulfilling work environment.',h33:'Meaningful Impact', paragraph13:'Every initiative we undertake is driven by the goal of delivering real value and lasting change.',h34:'Innovative Disruption', paragraph14:'We embrace disruptive thinking as a catalyst for solving complex challenges and unlocking new possibilities.'},
+    { h3:'Curiosity', paragraph1:'We foster a culture where team members challenge conventional thinking and seek creative, forward-thinking solutions.', image: Vision, h31:'Integrity', paragraph11:'Transparency and ethical conduct form the foundation of our relationships, both within our organization and with our clients.',h32:'Optimism', paragraph12:'We believe a positive mindset fuels creativity, enhances productivity, and cultivates a fulfilling work environment.',h33:'Meaningful Impact', paragraph13:'Every initiative we undertake is driven by the goal of delivering real value and lasting change.',h34:'Innovative Disruption', paragraph14:'We embrace disruptive thinking as a catalyst for solving complex challenges and unlocking new possibilities.'},
 ]
 export default function Abouttab() {
   const [value, setValue] = React.useState("1");

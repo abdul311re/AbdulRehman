@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import "../../App.css";
 
-function Home (){
+const Home = () => {
     const today = new Date();
     // Format date as needed
     const formattedDate = today.toLocaleDateString('en-US', {

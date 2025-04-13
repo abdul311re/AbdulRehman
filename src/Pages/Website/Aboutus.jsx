@@ -1,13 +1,13 @@
 import Model from "../../Components/Aboutus/Model"
 import Choose from "../../Components/Aboutus/Chooseus"
 import Abouttab from "../../Components/Aboutus/Abouttab";
-function About(){
+const About = () =>{
   return (<>
-  <div>
+   <main className="about-page">
   <Model />
   <Choose/>
   <Abouttab/>
-  </div>
+  </main>
   </>)
 }
 export default About;

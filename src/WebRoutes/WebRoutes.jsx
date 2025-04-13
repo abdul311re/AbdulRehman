@@ -7,6 +7,7 @@ const Home = lazy(() => import('../Pages/Website/Home.jsx'))
 const Website = lazy(() => import('../Pages/Website/Website.jsx'));
 const Portfolio = lazy(() => import('../Pages/Portfolio.jsx'));
 const Aboutus = lazy(() => import('../Pages/Website/Aboutus.jsx'));
+const Software = lazy(() => import('../Pages/Website/Software.jsx'));
 
 
 const WebRoutes = () => {
@@ -31,6 +32,7 @@ const WebRoutes = () => {
         <Route path='/Website' element={<Website />} />
         <Route path='/Portfolio' element={<Portfolio />} />
         <Route path='/Aboutus' element={<Aboutus />} />
+        <Route path='/Software' element={<Software />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
