@@ -6,7 +6,9 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import styled from 'styled-components';
 const Styledcol = styled.div`
-
+ .css-6p016c.Mui-selected {
+    color: purple !important;
+}
 .css-1qltlow-MuiTabs-indicator{
   background-color: purple;
   left: 0px;

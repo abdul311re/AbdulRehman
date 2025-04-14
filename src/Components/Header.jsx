@@ -116,9 +116,9 @@ export default function Header() {
     </div>
         </div>
         <PopoverGroup className="hidden md:flex lg:gap-x-8 sm:gap-x-6">
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900 py-1">
+          <Link to="/" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Home
-          </a>
+          </Link>
           <div className="relative" onMouseEnter={() => handleMouseEnter('services')}
             onMouseLeave={handleMouseLeave} 
       >
