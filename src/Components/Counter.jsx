@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-const AnimatedCounter = ({ from = 0, to = 5, duration = 2000, title = '' }) => {
+const AnimatedCounter = ({ from = 0, to = 5, duration = 2000, title = '',    counterFontSize = 'lg:text-7xl md:text-6xl text-4xl', }) => {
   const [count, setCount] = useState(from);
   const [isActive, setIsActive] = useState(false);
   const counterRef = useRef(null);
@@ -43,10 +43,10 @@ const AnimatedCounter = ({ from = 0, to = 5, duration = 2000, title = '' }) => {
 
   return (
     <div ref={counterRef}>
-      <div className="lg:text-7xl md:text-7xl text-4xl font-bold text-charcoal playwrite-gb-s-uniquifier">
-        {count.toFixed(1)}
+      <div className=" font-bold text-charcoal playwrite-gb-s-uniquifier">
+      <div className={counterFontSize}> {count.toFixed(1)}</div>
       </div>
-      <div className="md:pt-6 pt-4 md:pb-0 pb-6 text-sm text-charcoal font-normal">
+      <div  className="md:pt-6 pt-4 md:pb-0 pb-6 text-sm text-charcoal font-normal">
         {title}
       </div>
     </div>
