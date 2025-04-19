@@ -16,7 +16,7 @@ function Fourth(){
     <div className="bg-grey">
     <div className="relative lg:pb-36 pb-24 lg:px-10  md:px-8  lg:pt-10 pt-0  group ">
         <div className="absolute z-10 group-hover:pl-4 lg:top-12 top-16 transition-all duration-4s00 ease-in-out hidden lg:block ">
-            <h2 className="xl:text-7.3xl lg:text-6xl md:text-1xl text-3.5xl font-bold text-white opacity-60 lg:opacity-60 dynapuff-uniquifier  ">Essential Services</h2>
+            <h2 className="xl:text-7.3xl lg:text-6xl md:text-1xl text-3.5xl font-bold text-charcoal opacity-60 lg:opacity-20 dynapuff-uniquifier  ">Essential Services</h2>
         </div>
         <div className="absolute lg:z-20 z-10 lg:pt-4 xl:pt-4 pt-8  pl-2 ">
             <h3 className=" px-4 lg:px-0 text-1.3xl lg:text-3xl dynapuff-uniquifier font-medium text-charcoal opacity-95 ">Essential Services We Deliver</h3>

@@ -11,9 +11,9 @@ const Third =()=>{
     return(<>
     <div className="bg-black xl:px-32 lg:px-12 px-4 md:px-10 py-14 lg:flex">
         <div >
-            <h2 className='text-3xl font-bold text-white xl:pr-12 lg:pr-6 leading-tight dynapuff-uniquifier'>When You Should Choose Our Custom Software Development Services</h2>
-            <p className='text-white pt-4 xl:pr-20 lg:pr-6'>We deliver powerful software solutions for businesses of all sizes—efficiently, with a strong focus on quality, return on investment, and user satisfaction.</p>
-            <p className='text-white pt-4 xl:pr-20 lg:pr-6'>Drive success through custom-built software designed to match your unique business goals. You should explore our development services when:</p>
+            <h2 className='text-3xl font-bold text-white  lg:pr-6 leading-tight dynapuff-uniquifier'>When You Should Choose Our Custom Software Development Services</h2>
+            <p className='text-white pt-4 xl:pr-10 lg:pr-6'>We deliver powerful software solutions for businesses of all sizes—efficiently, with a strong focus on quality, return on investment, and user satisfaction.</p>
+            <p className='text-white pt-4 xl:pr-10 lg:pr-6'>Drive success through custom-built software designed to match your unique business goals. You should explore our development services when:</p>
             <div className="lg:my-6 md:my-5 my-7 flex">
   <button className="bg-black border text-white rounded-full pl-8 pr-5 hover:pr-10 hover:pl-4 py-1 relative group overflow-hidden transition-all duration-400 text-sm">
     

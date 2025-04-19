@@ -35,7 +35,7 @@ function Hero(){
     return (<>
     <div className="flex flex-col  lg:flex-row justify-center xl:pb-20 ">
     <div  className=" lg:w-1/2 w-full">
-    <h1 className="xl:text-[38px] lg:text-[28px] text-[25px] w-3/4 lg:pl-8 pl-5 pt-12 edu-au-vic-wa-nt-pre-uniquifier">Custom Web Design and Development Services</h1>
+    <h1 className="xl:text-[35px] lg:text-[28px] text-[25px] w-3/4 md:pl-5 lg:pl-8 pl-5 pt-12 edu-au-vic-wa-nt-pre-uniquifier">Custom Web Design and Development Services</h1>
     <p className="lg:w-[85%] w-[95%] lg:pl-8 pl-6 lg:pt-7 pt-5 lg:text-md text-sm  poppins-normal-italic ">Entrust your web design and development projects to a team of skilled professionals who adapt quickly and drive business growth. Benefit from clear communication and collaboration to stay updated on every project milestone. With dedicated developers and designers, ensure the success of your most crucial web initiatives.</p>
     <div className="lg:px-10 pl-6 lg:my-8 my-5 flex">
     <ScrollAnimation animateIn="animate__fadeInRight " duration={2}>

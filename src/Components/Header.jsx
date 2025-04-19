@@ -8,12 +8,7 @@ import {
   PopoverGroup,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Sasuke from '../Assets/sasuke.jpg';
@@ -28,18 +23,18 @@ import { Link } from "react-router-dom";
 import Login from "./AdminLogin/Login";
 import { useLocation } from "react-router-dom";
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', path: '/first', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Analytics', description: 'Get a better understanding of your traffic', path: '/first', },
+  { name: 'Engagement', description: 'Speak directly to your customers', href: '#',  },
+  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', },
+  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', },
+  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', },
 ]
 const Services = [
-  { name: 'Website Development' , description: 'Get a better understanding of your traffic', Route:'/Website', icon: ChartPieIcon },
-  { name: 'Wordpress Development', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Shopify Development', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Mobile Development', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Software Development', description: 'Build strategic funnels that will convert', Route:'/Software', icon: ArrowPathIcon },
+  { name: 'Website Development' , description: 'Get a better understanding of your traffic', Route:'/Website',},
+  { name: 'Wordpress Development', description: 'Speak directly to your customers', href: '#', },
+  { name: 'Shopify Development', description: 'Your customers’ data will be safe and secure', href: '#',  },
+  { name: 'Mobile App Development', description: 'Connect with third-party tools', Route:'/Mobile', },
+  { name: 'Software Development', description: 'Build strategic funnels that will convert', Route:'/Software', },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -82,7 +77,7 @@ export default function Header() {
           </Link>
         </div>
         
-        <div className="flex md:hidden">
+        <div className="flex max:hidden">
         <div>
       {/* Conditionally render Open or Close button */}
       {!mobileMenuOpen ? (
@@ -115,7 +110,7 @@ export default function Header() {
       )}
     </div>
         </div>
-        <PopoverGroup className="hidden md:flex lg:gap-x-8 sm:gap-x-6">
+        <PopoverGroup className="md:hidden hidden max:block max:flex max:gap-x-8 sm:gap-x-6">
           <Link to="/" className="text-base font-semibold leading-6 text-gray-900 py-1">
             Home
           </Link>
@@ -154,9 +149,6 @@ export default function Header() {
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
-                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
                     <div className="flex-auto ">
                       <a href={item.href} className="block font-semibold text-gray-900">
                         {item.name}
@@ -209,24 +201,20 @@ export default function Header() {
             onMouseLeave={handleMouseLeave}
              className={`fixed top-16 left-0 z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5 transition-transform duration-200`}
             >
-               <div className="py-4 px-16 flex  ">
+              <div className=" px-16 flex  ">
                 <div>
               <img alt="Black"
               src={Sasuke1}
-              className=" h-16 sm:h-16 lg:h-full w-52  "
+              className=" h-16 sm:h-16 lg:h-full w-72  "
             /></div>
-              <div className="flex flex-wrap lg:w-full mx-5 ">
+                <div className="flex flex-wrap  lg:w-full mx-5">
                 {products.map((item) => (
-                  <Link to={item.path} 
+                  <Link to={item.Route} 
+                 
                   key={item.name}
-                 >  
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 w-[485px] rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                  >
-                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white ">
-                      <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
+                  className="group relative flex items-center rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 w-1/2"
+      
+                 >
                     <div className="flex-auto ">
                       <a href={item.href} className="block font-semibold text-gray-900">
                         {item.name}
@@ -234,18 +222,17 @@ export default function Header() {
                       </a>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
-                  </div>
                   </Link>
                 ))}
-              </div>
+                </div>
               </div>
             </div>)}
             </div>
         <Login/>
         </PopoverGroup>
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="sm:hidden">
-        <div className="fixed inset-0 z-10" />
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen}  className="lg:hidden">
+        <div className="fixed inset-0 z-10 " />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-4/5 h-auto mt-2 overflow-y-auto bg-white px-3 py-0 top-14 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 border-t  border-l ">
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">

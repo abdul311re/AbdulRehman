@@ -89,10 +89,12 @@ export default {
       },
       screens: {
         xs: '414px',
-        xms: '390px'
+        xms: '390px',
+        max:  '830px',
       },
       boxShadow: {
         'custom-glow': '0px 0px 60px rgba(255, 255, 255, 0.4)',
+        'text': '0 2px 3px rgba(0, 0, 0, 0.2)', 
       },
     }
   },
