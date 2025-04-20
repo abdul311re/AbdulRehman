@@ -11,10 +11,10 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import Sasuke from '../Assets/sasuke.jpg';
-import Sasuke1 from '../Assets/sasuke1.png';
+import Sasuke from '../../public/Phone.svg';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Arlogo from '../Assets/ArLogo.png'; 
+import { FaAngleRight } from 'react-icons/fa';
 import Product from '../Assets/Logo/Product.png';
 import Home from '../Assets/Logo/home (1).svg';
 import About from '../Assets/Logo/aboutus.svg';
@@ -30,12 +30,78 @@ const products = [
   { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', },
 ]
 const Services = [
-  { name: 'Website Development' , description: 'Get a better understanding of your traffic', Route:'/Website',},
-  { name: 'Wordpress Development', description: 'Speak directly to your customers', href: '#', },
-  { name: 'Shopify Development', description: 'Your customers’ data will be safe and secure', href: '#',  },
-  { name: 'Mobile App Development', description: 'Connect with third-party tools', Route:'/Mobile', },
-  { name: 'Software Development', description: 'Build strategic funnels that will convert', Route:'/Software', },
-]
+  { name: 'Website Development' , 
+     Route:'/Website',
+     subServices: [
+      { name: 'WordPress Development', Route: '/Website' },
+      { name: 'Ecommerce Website Development', Route: '/Website' },
+      { name: 'Web Portals', Route: '/Website' },
+    ],
+    },
+    { name: 'Mobile App Development' , 
+      Route:'/Mobile',
+      subServices: [
+       { name: 'IOS App Development', Route: '/Mobile' },
+       { name: 'Andriod App Development', Route: '/Mobile' },
+       { name: 'Cross Platfrom App Development', Route: '/Mobile' },
+     ],
+     },
+     { name: 'Custom Software Development' , 
+      Route:'/Software',
+      subServices: [
+       { name: 'ERP Solution', Route: '/Software' },
+       { name: 'CRM Solution', Route: '/Software' },
+       { name: 'CMS Solution', Route: '/Software' },
+     ],
+     },
+     { name: 'Game Development' , 
+      Route:'/Game',
+      subServices: [
+       { name: '2D Game Development', Route: '/Game' },
+       { name: '3D Game Development', Route: '/Game' },
+       { name: 'Web3 Game Development', Route: '/Game' },
+     ],
+     },
+     { name: 'Artificial Intelligence' , 
+      Route:'/Website',
+      subServices: [
+       { name: 'Generative AI', Route: '/Website' },
+       { name: 'Natural Language Processing', Route: '/Website' },
+       { name: 'Speech Recognition', Route: '/Website' },
+     ],
+     },
+     { name: 'Cloud Services' , 
+      Route:'/Website',
+      subServices: [
+       { name: 'Cloud Application Development', Route: '/Website' },
+       { name: 'Cloud Migration', Route: '/Website' },
+       { name: 'CLoud Sport & Maintanence', Route: '/Website' },
+     ],
+     },
+     { name: 'Staff Augmentation' , 
+      Route:'/Website',
+      subServices: [
+       { name: 'Hire Andriod App Developer', Route: '/Mobile' },
+       { name: 'Hire IOS App Developer', Route: '/Mobile' },
+       { name: 'Hire Nodejs Developer', Route: '/Website' },
+     ],
+     },
+     { name: 'Digital Marketing Services' , 
+      Route:'/Website',
+      subServices: [
+       { name: 'Social Media Marketing', Route: '/Mobile' },
+       { name: 'Search Engine Marketing', Route: '/Mobile' },
+       { name: 'Search Engine Optimization', Route: '/Website' },
+     ],
+     },
+     { name: 'Blockchain Development' , 
+      Route:'/Website',
+      subServices: [
+       { name: 'Metaverse Development', Route: '/Mobile' },
+       { name: 'Nft Development', Route: '/Mobile' },
+     ],
+     },
+    ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
@@ -131,48 +197,49 @@ export default function Header() {
               className={`fixed top-16 left-0 z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5 transition-transform duration-200`}
              
             >
-              <div className=" px-16 flex  ">
-                <div>
-              <img alt="Black"
-              src={Sasuke}
-              className=" h-16 sm:h-16 lg:h-full w-72  "
-            /></div>
-                <div className="flex flex-wrap  lg:w-full mx-5">
-                {Services.map((item) => (
-                  <Link to={item.Route} 
-                 
-                  key={item.name}
-                  className="group relative flex items-center gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 w-full md:w-6/12"
-      
-                 >
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                  >
-                    <div className="flex-auto ">
-                      <a href={item.href} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
-                    </div>
-                  </div>
-                  </Link>
-                ))}
-                </div>
-              </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 ">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 "
-                  >
-                    <item.icon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
-                    {item.name}
-                  </a>
-                ))}
-              </div>
+         <div className="px-10 flex">
+  {/* Image Section */}
+  <div className='w-[35%] py-6'>
+    <h3 className='font-bold text-md'>Designed For Victory</h3>
+    <p className='text-sm pt-1 opacity-60'>Empowering businesses with innovative, future-focused technology. We deliver tailored solutions to drive rapid digital growth across global industries</p>
+   <div className='flex items-center justify-center'>
+    <img
+      alt="Black"
+      src={Sasuke}
+      className=" w-56"
+    /></div>
+  </div>
+
+  {/* Services Section */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:w-full h-full mx-5 mb-5 divide-y divide-gray-200 ">
+    {Services.map((item, index) => (
+      <div
+        key={index}
+        className=" group hover:bg-gray-50  pt-3  px-4"
+      >
+        <Link
+          to={item.Route}
+          className="block font-bold text-black "
+        >
+          {item.name}
+        </Link>
+        {/* Subservices */}
+        {item.subServices && (
+          <ul className="list-none pl-0 mt-2 space-y-1">
+            {item.subServices.map((sub, subIndex) => (
+            <li key={subIndex} className="flex items-center text-sm text-hex hover:underline opacity-60">
+              <FaAngleRight className="text-gray-500 mr-2 font-bold" />
+            <Link to={sub.Route}>
+              {sub.name}
+            </Link>
+          </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
             </div>
             )}
             </div>
@@ -201,31 +268,49 @@ export default function Header() {
             onMouseLeave={handleMouseLeave}
              className={`fixed top-16 left-0 z-10 mt-3 w-screen bg-white shadow-lg ring-1 ring-gray-900/5 transition-transform duration-200`}
             >
-              <div className=" px-16 flex  ">
-                <div>
-              <img alt="Black"
-              src={Sasuke1}
-              className=" h-16 sm:h-16 lg:h-full w-72  "
-            /></div>
-                <div className="flex flex-wrap  lg:w-full mx-5">
-                {products.map((item) => (
-                  <Link to={item.Route} 
-                 
-                  key={item.name}
-                  className="group relative flex items-center rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 w-1/2"
-      
-                 >
-                    <div className="flex-auto ">
-                      <a href={item.href} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
-                    </div>
-                  </Link>
-                ))}
-                </div>
-              </div>
+               <div className="px-10 flex">
+  {/* Image Section */}
+  <div className='w-[35%] py-6'>
+    <h3 className='font-bold text-md'>Designed For Victory</h3>
+    <p className='text-sm pt-1 opacity-60'>Empowering businesses with innovative, future-focused technology. We deliver tailored solutions to drive rapid digital growth across global industries</p>
+   <div className='flex items-center justify-center'>
+    <img
+      alt="Black"
+      src={Sasuke}
+      className=" w-56"
+    /></div>
+  </div>
+
+  {/* Services Section */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:w-full h-full mx-5 mb-5 divide-y divide-gray-200 ">
+    {Services.map((item, index) => (
+      <div
+        key={index}
+        className=" group hover:bg-gray-50  pt-3  px-4"
+      >
+        <Link
+          to={item.Route}
+          className="block font-bold text-black "
+        >
+          {item.name}
+        </Link>
+        {/* Subservices */}
+        {item.subServices && (
+          <ul className="list-none pl-0 mt-2 space-y-1">
+            {item.subServices.map((sub, subIndex) => (
+            <li key={subIndex} className="flex items-center text-sm text-hex hover:underline opacity-60">
+              <FaAngleRight className="text-gray-500 mr-2 font-bold" />
+            <Link to={sub.Route}>
+              {sub.name}
+            </Link>
+          </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
             </div>)}
             </div>
         <Login/>
