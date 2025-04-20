@@ -1,4 +1,4 @@
-import{j as e,F as l,c as i,r}from"./index-MH63Ufv5.js";import{d as o}from"./styled-components.browser.esm-Dyr9AJlH.js";import{G as c,B as p}from"./button-HPSswee-.js";import{S as d}from"./animate-8ucMPC4q.js";import{B as m}from"./Breadcrumb-GSmS4woT.js";const h="/AbdulRehman/assets/MobileHero-CW_2VXm-.svg",u=[{label:"Home",href:"/"},{label:"Services"},{label:"Mobile App Development",href:"/Software"}],x=o.div`
+import{j as e,F as l,c as i,r}from"./index-DStxckwd.js";import{d as o}from"./styled-components.browser.esm-Dfw1p-c6.js";import{G as c,B as p}from"./button-CFBkIU_f.js";import{S as d}from"./animate-BN2pdIx4.js";import{B as m}from"./Breadcrumb-CxvJa9kZ.js";const h="/AbdulRehman/assets/MobileHero-CW_2VXm-.svg",u=[{label:"Home",href:"/"},{label:"Services"},{label:"Mobile App Development",href:"/Software"}],x=o.div`
     display:flex;
     align-items:center;
     justify-content:center;
