@@ -21,7 +21,7 @@ const Third =()=>{
     <span className="absolute left-0 top-0 h-full w-0 bg-white group-hover:w-full transition-all duration-300 z-0"></span>
 
     {/* Moving Arrow */}
-    <span className="absolute left-3 group-hover:left-[230px] transition-all duration-300 z-10">
+    <span className="absolute left-3 lg:group-hover:left-[230px] group-hover:left-[215px] transition-all duration-300 z-10">
       <FontAwesomeIcon icon={faAnglesRight} className="group-hover:text-charcoal " />
     </span>
 

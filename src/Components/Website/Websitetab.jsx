@@ -61,7 +61,7 @@ export default function Websitetab() {
   };
 
   return (
-    <div className="py-14 xl:px-32 lg:px-10 px-5 bg-black">
+    <div className="lg:mt-6 xl:mt-0 mt-0 py-14 xl:px-32 lg:px-10 px-5 bg-black">
       <container >
         <div className="mb-8">
           <div className="grid lg:grid-cols-2 gap-8 text-white ">

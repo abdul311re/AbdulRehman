@@ -22,7 +22,7 @@ const Home = () => {
     return(<>
     <div className="bg-white">
         <div className="py-16 ">
-            <h1 className="text-2xl sm:text-3xl lg:text-2.7xl pt-0 lg:pt-8 text-black edu-au-vic-wa-nt-pre-uniquifier text-center opacity-90 home-h1">Create Your Software Solutions <span className="text-purple font-bold">–</span> Seamlessly.</h1>
+            <h1 className="text-2xl  md:text-[1.8rem] lg:text-[2.2rem]  xl:text-2.7xl pt-0 lg:pt-8 text-black edu-au-vic-wa-nt-pre-uniquifier text-center opacity-90 home-h1">Create Your Software Solutions <span className="text-purple font-bold">–</span> Seamlessly.</h1>
             <h2 className="text-1.3xl lg:text-4xl font-bold text-charcoal edu-au-vic-wa-nt-pre-uniquifier  text-center pt-4 lg:pt-6 px-2 lg:px-0 ">Smarter, Faster, Better</h2>
             <div className="flex flex-col lg:flex-row gap-4 my-8 lg:my-12 items-center justify-center">
             <div className='mt-3'><Button variant="contained" disableElevation  className='!bg-purple text-white lg:h-12 h-10 dynapuff-uniquifier hover:!bg-grey hover:text-black' ><p className='dynapuff-uniquifier '>

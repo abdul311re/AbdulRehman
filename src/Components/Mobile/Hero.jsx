@@ -9,7 +9,7 @@ import Breadcrumb from "../Breadcrumb.jsx";
 const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Services' },
-    { label: 'Mobile App Development', href: '/Software' }, // Current page (no link)
+    { label: 'Mobile App Development', href: '/Mobile' }, // Current page (no link)
   ];
 const Styledcol = styled.div`
     display:flex;
@@ -26,7 +26,7 @@ const Styledcol = styled.div`
 const Hero = () => {
     return(<>
          <div className='lg:flex bg-charcoal '>
-            <div className='lg:w-1/2 md:pl-10 xl:pl-32 xl:pr-16 lg:px-20 px-2 md:px-0  pr-10 md:pt-20 pt-12 lg:pt-0 flex flex-col  justify-center'>
+            <div className='lg:w-1/2 md:pl-10 xl:pl-32 xl:pr-16 lg:px-12 px-2  md:px-0  pr-10 md:pt-20 pt-12 lg:pt-12 xl:pt-2 flex flex-col  justify-center'>
             <div className="md:px-6  pl-1 lg:px-0"><Breadcrumb items={breadcrumbItems} colors={{
             bg: 'bg-charcoal',
             text: 'text-white',
@@ -59,8 +59,8 @@ const Hero = () => {
   </div></div>
             </div>
             <div className='lg:w-1/2  '>
-            <div className="">
-            <div className="absolute md:w-[45%] w-[100%] md:pt-0 pt-6"><img src={Grid} alt="" /></div>
+            <div className="lg:pt-6 pt-0 xl:pt-0">
+            <div className="absolute md:w-[45%] w-[100%] md:pt-0  pt-6"><img src={Grid} alt="" /></div>
               <Styledcol>   
             <img src={Mobilehero} alt="" className="md:w-[75%] w-full object-cover bg-charcoal rounded-5xl "/></Styledcol></div></div>
         </div>

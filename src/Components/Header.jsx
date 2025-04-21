@@ -199,27 +199,27 @@ export default function Header() {
             >
          <div className="px-10 flex">
   {/* Image Section */}
-  <div className='w-[35%] py-6'>
-    <h3 className='font-bold text-md'>Designed For Victory</h3>
-    <p className='text-sm pt-1 opacity-60'>Empowering businesses with innovative, future-focused technology. We deliver tailored solutions to drive rapid digital growth across global industries</p>
+  <div className='w-[35%] py-5'>
+    <h3 className='font-bold xl:text-[16px] text-xs'>Designed For Victory</h3>
+    <p className='xl:text-sm text-xs pt-2 opacity-60'>Empowering businesses with innovative, future-focused technology. We deliver tailored solutions to drive rapid digital growth across global industries</p>
    <div className='flex items-center justify-center'>
     <img
       alt="Black"
       src={Sasuke}
-      className=" w-56"
+      className=" xl:w-56 w-40"
     /></div>
   </div>
 
   {/* Services Section */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:w-full h-full mx-5 mb-5 divide-y divide-gray-200 ">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:gap-x-6 gap-y-4 lg:w-full h-full xl:mx-5 mb-5 divide-y divide-gray-200 ">
     {Services.map((item, index) => (
       <div
         key={index}
-        className=" group hover:bg-gray-50  pt-3  px-4"
+        className=" group pt-5 px-4"
       >
         <Link
           to={item.Route}
-          className="block font-bold text-black "
+          className="block font-bold text-black text-xs xl:text-[16px] hover:text-charcoal"
         >
           {item.name}
         </Link>
@@ -227,9 +227,9 @@ export default function Header() {
         {item.subServices && (
           <ul className="list-none pl-0 mt-2 space-y-1">
             {item.subServices.map((sub, subIndex) => (
-            <li key={subIndex} className="flex items-center text-sm text-hex hover:underline opacity-60">
+            <li key={subIndex} className=" xl:text-sm text-xs text-hex hover:underline opacity-60 hover:text-charcoal">
+               <Link to={sub.Route} className='flex items-center'>
               <FaAngleRight className="text-gray-500 mr-2 font-bold" />
-            <Link to={sub.Route}>
               {sub.name}
             </Link>
           </li>
@@ -271,26 +271,26 @@ export default function Header() {
                <div className="px-10 flex">
   {/* Image Section */}
   <div className='w-[35%] py-6'>
-    <h3 className='font-bold text-md'>Designed For Victory</h3>
-    <p className='text-sm pt-1 opacity-60'>Empowering businesses with innovative, future-focused technology. We deliver tailored solutions to drive rapid digital growth across global industries</p>
+    <h3 className='font-bold xl:text-[16px] text-xs'>Designed For Victory</h3>
+    <p className='xl:text-sm text-xs pt-1 opacity-60'>Empowering businesses with innovative, future-focused technology. We deliver tailored solutions to drive rapid digital growth across global industries</p>
    <div className='flex items-center justify-center'>
     <img
       alt="Black"
       src={Sasuke}
-      className=" w-56"
+      className="xl:w-56 w-40"
     /></div>
   </div>
 
   {/* Services Section */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:w-full h-full mx-5 mb-5 divide-y divide-gray-200 ">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:w-full h-full xl:mx-5 mb-5 divide-y divide-gray-200 ">
     {Services.map((item, index) => (
       <div
         key={index}
-        className=" group hover:bg-gray-50  pt-3  px-4"
+        className=" group  pt-5  px-4"
       >
         <Link
           to={item.Route}
-          className="block font-bold text-black "
+          className="block font-bold text-black text-xs xl:text-[16px] hover:text-charcoal "
         >
           {item.name}
         </Link>
@@ -298,9 +298,9 @@ export default function Header() {
         {item.subServices && (
           <ul className="list-none pl-0 mt-2 space-y-1">
             {item.subServices.map((sub, subIndex) => (
-            <li key={subIndex} className="flex items-center text-sm text-hex hover:underline opacity-60">
+            <li key={subIndex} className=" text-sm text-hex hover:underline hover:text-charcoal opacity-60">
+               <Link to={sub.Route} className='flex items-center'>
               <FaAngleRight className="text-gray-500 mr-2 font-bold" />
-            <Link to={sub.Route}>
               {sub.name}
             </Link>
           </li>

@@ -4,8 +4,8 @@ function Service(){
 return(<>
 <div className="bg-Hex lg:flex  gap-16 lg:py-20 py-14 xl:px-32 lg:px-20  px-5">
     <div className="lg:w-1/2">
-    <h2 className="md:text-3xl text-2xl pb-6 pt-1 font-bold text-black dynapuff-uniquifier ">Custom Web Development Solutions for Advanced, High-Performing Websites.</h2>
-    <p className="pb-6 text-md">Component-based approach is essential for high-performing websites. Meet all your quality and functionality standards with TekRevol’s expert web development services.</p>
+    <h2 className="md:text-3xl text-2xl pb-6 pt-1 font-bold text-black dynapuff-uniquifier ">Custom <span className="text-charcoal"> Web Development Solutions </span> for Advanced, High-Performing Websites.</h2>
+    <p className="pb-6 text-md">Component-based approach is essential for high-performing websites. Meet all your quality and functionality standards with AR’s expert web development services.</p>
     <Button className="bg-charcoal py-5">Start with a Free Consultation</Button>
     </div>
     <div className="lg:w-1/2 scrollable-element my-10 lg:my-0 px-2 h-[340px] xl:h-[300px]" >

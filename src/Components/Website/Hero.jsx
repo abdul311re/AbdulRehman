@@ -6,6 +6,7 @@ import Arlogo from '../../Assets/ArLogo.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css';
 import { Button } from "@/components/ui/button";
+import Breadcrumb from "../Breadcrumb.jsx";
 import {
   Card,
   CardContent,
@@ -29,13 +30,25 @@ const Styledcol = styled.div`
   border-top-left-radius: 0 !important; 
 }
 `;
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Services' },
+  { label: 'Website Development', href: '/Website' }, // Current page (no link)
+];
 function Hero(){
  
 
     return (<>
     <div className="flex flex-col  lg:flex-row justify-center xl:pb-20 ">
     <div  className=" lg:w-1/2 w-full">
-    <h1 className="xl:text-[35px] lg:text-[28px] text-[25px] w-3/4 md:pl-5 lg:pl-8 pl-5 pt-12 edu-au-vic-wa-nt-pre-uniquifier">Custom Web Design and Development Services</h1>
+    <div className="md:px-6 md:pl-5 lg:pl-10 pl-5 lg:pt-5 pt-8"><Breadcrumb items={breadcrumbItems} colors={{
+            bg: 'bg-white',
+            text: 'text-black',
+            hover: 'hover:text-purple',
+            separator: 'text-black',
+            current: {text: 'text-black',bg: 'bg-blue-600' // Custom indicator
+            }}} /></div>
+    <h1 className="xl:text-[35px] lg:text-[28px] text-[25px] w-3/4 md:pl-5 lg:pl-8 pl-5  edu-au-vic-wa-nt-pre-uniquifier">Custom Web Design and Development Services</h1>
     <p className="lg:w-[85%] w-[95%] lg:pl-8 pl-6 lg:pt-7 pt-5 lg:text-md text-sm  poppins-normal-italic ">Entrust your web design and development projects to a team of skilled professionals who adapt quickly and drive business growth. Benefit from clear communication and collaboration to stay updated on every project milestone. With dedicated developers and designers, ensure the success of your most crucial web initiatives.</p>
     <div className="lg:px-10 pl-6 lg:my-8 my-5 flex">
     <ScrollAnimation animateIn="animate__fadeInRight " duration={2}>
@@ -72,7 +85,7 @@ function Hero(){
         <div className="shadow-[0_29.73px_29.73px_#00000017,0_7.65px_16.14px_#0000001a]  rounded-full "><img src={Arlogo} alt="" className="w-6  " /></div>
     <h2 className="playwrite-gb-s-uniquifier text-[10px] py-1 ml-2">Abdul Rehman (31) </h2></div>
 {/* //////////////////////////////////////Cards/////////////////////////////////// */}
-    <div className="absolute lg:left-[-300px] left-[100px] z-10 top-[-100px] xl:top-[165px] lg:top-[200px] hidden lg:block ">
+    <div className="absolute lg:left-[-300px] left-[100px] z-10 top-[-100px] xl:top-[175px] lg:top-[220px] hidden lg:block ">
   <ScrollAnimation animateIn="animate__fadeInLeft "  duration={2}>
   <div className="shadow-[0_29.73px_29.73px_#00000017,0_7.65px_16.14px_#0000001a] lg:p-4 p-2 bg-white rounded-lg lg:w-64 w-48 ">
     <h2 className="playwrite-gb-s-uniquifier lg:text-md text-xs py-1">Grow your Business</h2>
@@ -81,7 +94,7 @@ function Hero(){
     </div>
     </ScrollAnimation>
     </div>
-    <div className="absolute hidden lg:block lg:left-[-300px] left-[-20px] z-10 top-[320px] xl:top-[280px] lg:top-[320px] ">
+    <div className="absolute hidden lg:block lg:left-[-300px] left-[-20px] z-10 top-[310px] xl:top-[300px] lg:top-[340px] ">
     <div className="flex flex-col lg:flex-row ">
     <ScrollAnimation animateIn="animate__fadeInUp " duration={2}>
     <div className="shadow-[0_29.73px_29.73px_#00000017,0_7.65px_16.14px_#0000001a] lg:p-4 p-2 bg-white rounded-lg lg:w-64 w-48 lg:h-36 h-full  lg:mt-10">
