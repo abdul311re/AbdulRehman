@@ -73,7 +73,7 @@ const Hero = ()=>{
     <div className="two" style={{
     position: 'absolute',
     left: '450px',
-    top: '0px', // fallback before animation
+    top: '-80px', // fallback before animation
     opacity: 1,   // start invisible until GSAP animates
   }}>
        <Dmodel />
