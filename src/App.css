@@ -160,3 +160,19 @@
     transform: rotate(-360deg);
   }
 }
+.container {
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-element {
+  position: absolute;
+  top: 10%; /* Initial position (adjust as necessary) */
+  left: 50%;
+  transition: transform 0.1s ease;
+}

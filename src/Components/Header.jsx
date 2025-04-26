@@ -63,7 +63,7 @@ const Services = [
      ],
      },
      { name: 'Artificial Intelligence' , 
-      Route:'/Website',
+      Route:'/Artificial',
       subServices: [
        { name: 'Generative AI', Route: '/Website' },
        { name: 'Natural Language Processing', Route: '/Website' },
