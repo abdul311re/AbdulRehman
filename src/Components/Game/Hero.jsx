@@ -30,8 +30,8 @@ const Hero = () => {
     tl.from(".two", {
       opacity: 1,
       y: -50,
-      right:"20px", 
-      top:"-20px",// Slightly less movement for smoother effect
+      right:"20px !important", 
+      top:"-20px !important",// Slightly less movement for smoother effect
       duration: 1,
       ease: "power2.out",
     }).to(".two", {
