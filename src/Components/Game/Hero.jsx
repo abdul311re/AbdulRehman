@@ -31,7 +31,7 @@ const Hero = () => {
       {opacity: 1,
         y: -50,
         right:"20px", 
-        top:"-20px",// Slightly less movement for smoother effect
+        top:"-20px !important",// Slightly less movement for smoother effect
         duration: 1,
         ease: "power2.out", }, // starting position
       { opacity: 1,
