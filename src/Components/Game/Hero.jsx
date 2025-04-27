@@ -27,21 +27,23 @@ const Hero = () => {
       },
     });
 
-    tl.from(".two", {
-      opacity: 1,
-      y: -50,
-      right:"20px !important", 
-      top:"-20px !important",// Slightly less movement for smoother effect
-      duration: 1,
-      ease: "power2.out",
-    }).to(".two", {
-      opacity: 1,
-      y: 0,
-      top:"320px",
-      right:"30%",
-      duration: 1,
-      ease: "power2.out",
-    });
+    tl.fromTo(".two", 
+      {opacity: 1,
+        y: -50,
+        right:"20px", 
+        top:"-20px",// Slightly less movement for smoother effect
+        duration: 1,
+        ease: "power2.out", }, // starting position
+      { opacity: 1,
+        y: 0,
+        top:"320px",
+        right:"30%",
+        duration: 1,
+        ease: "power2.out",   } // end position
+    );
+    setTimeout(() => {
+      ScrollTrigger.refresh(); // 👈 Refresh after 0.5s
+    }, 500);
   }, []);
 
   return (
