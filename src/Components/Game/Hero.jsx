@@ -31,14 +31,14 @@ const Hero = () => {
       {opacity: 1,
         y: -50,
         left:"680px", 
-        top:"-40px !important",// Slightly less movement for smoother effect
+        top:"-80px !important",// Slightly less movement for smoother effect
         duration: 1,
         ease: "power2.out", }, // starting position
       { opacity: 1,
         y: 0,
         top:"420px",
         left:"50%",
-        transform: 'translate(-50%, 50px)',
+        transform: 'translate(-50%, 50px) !important',
         duration: 1,
         ease: "power2.out",   } // end position
     );
