@@ -30,14 +30,15 @@ const Hero = () => {
     tl.fromTo(".two", 
       {opacity: 1,
         y: -50,
-        right:"20px", 
-        top:"-20px !important",// Slightly less movement for smoother effect
+        left:"680px", 
+        top:"-40px !important",// Slightly less movement for smoother effect
         duration: 1,
         ease: "power2.out", }, // starting position
       { opacity: 1,
         y: 0,
-        top:"320px",
-        right:"30%",
+        top:"420px",
+        left:"50%",
+        transform: 'translate(-50%, 50px)',
         duration: 1,
         ease: "power2.out",   } // end position
     );
@@ -51,7 +52,7 @@ const Hero = () => {
       <div className="relative">
         <div className="flex">
           {/* Left Section */}
-          <div className="basis-1/2 md:pl-10 lg:pl-28 lg:pr-16 px-2 md:px-0 pr-10 md:pt-20 pt-12 lg:pt-20 flex flex-col justify-center">
+          <div className="basis-1/2 md:pl-10 lg:pl-28 lg:pr-16 px-2 md:px-0 pr-10 md:pt-20 pt-12 lg:pt-20 lg: pb-20 flex flex-col justify-center">
             <div className="md:px-6 lg:px-0">
               <Breadcrumb items={breadcrumbItems} colors={{
                 bg: 'bg-white',
@@ -94,7 +95,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Section */}
-        <div className="h-[500px] bg-grey"></div>
+        <div className="h-[500px] bg-black"></div>
       </div>
     </>
   );
