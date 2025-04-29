@@ -22,7 +22,7 @@ const Hero = () => {
         trigger: ".two",
         start: "top center",
         end: "bottom center",
-        scrub: 1, // Smooth scrubbing
+        scrub: 1,
         markers: false,
       },
     });
@@ -30,13 +30,13 @@ const Hero = () => {
     tl.fromTo(".two", 
       {opacity: 1,
         y: -50,
-        right:"30px", 
-        top:"-10px !important",// Slightly less movement for smoother effect
+        right:"5%", 
+        top:"-50px !important",// Slightly less movement for smoother effect
         duration: 1,
         ease: "power2.out", }, // starting position
       { opacity: 1,
         y: 0,
-        top:"320px",
+        top:"520px",
         right:"50%",
         xPercent: 50,
         duration: 1,
@@ -95,7 +95,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Section */}
-        <div className="h-[500px] bg-grey"></div>
+        <div className="h-[900px] bg-black"></div>
       </div>
     </>
   );
