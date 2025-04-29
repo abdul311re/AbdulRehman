@@ -30,15 +30,15 @@ const Hero = () => {
     tl.fromTo(".two", 
       {opacity: 1,
         y: -50,
-        left:"680px", 
-        top:"-80px !important",// Slightly less movement for smoother effect
+        right:"30px", 
+        top:"-10px !important",// Slightly less movement for smoother effect
         duration: 1,
         ease: "power2.out", }, // starting position
       { opacity: 1,
         y: 0,
-        top:"420px",
-        left:"50%",
-        transform: 'translate(-50%, 50px) !important',
+        top:"320px",
+        right:"50%",
+        xPercent: 50,
         duration: 1,
         ease: "power2.out",   } // end position
     );
@@ -95,7 +95,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Section */}
-        <div className="h-[500px] bg-black"></div>
+        <div className="h-[500px] bg-grey"></div>
       </div>
     </>
   );
