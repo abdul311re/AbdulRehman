@@ -17,6 +17,7 @@ const breadcrumbItems = [
 
 const Hero = () => {
   useEffect(() => {
+   
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".two",
@@ -24,28 +25,19 @@ const Hero = () => {
         end: "bottom center",
         scrub: 1,
         markers: false,
+        
       },
     });
 
     tl.fromTo(".two", 
-      {opacity: 1,
-        y: -50,
-        right:"5%",
-        yPercent:0, 
-        top:"-80px !important",
-        // Slightly less movement for smoother effect
-        duration: 1,
-        ease: "power2.out", }, // starting position
-      { opacity: 1,
-        y: 0,
-        top:"520px",
-        right:"50%",
-        xPercent: 50,
-        yPercent:20,
-        duration: 1,
-        ease: "power2.out",   } // end position
-    );
-  
+      { opacity: 1, y: -50, right: "5%", yPercent: 0, top: "-80px !important" }, // starting position
+      { opacity: 1, y: 0, top: "520px", right: "50%", xPercent: 50, yPercent: 20, duration: 1, ease: "power2.out", onStart: () => {
+          gsap.set(".two", { top: "-80px !important" });
+      }} // end position
+    )
+    setTimeout(() => {
+      ScrollTrigger.refresh(); // 👈 Refresh after 0.5s
+    }, 500);
   }, []);
 
   return (
@@ -90,7 +82,7 @@ const Hero = () => {
           </div>
 
           {/* Right Section (Animated Model) */}
-          <div className="two absolute">
+          <div className="two absolute ">
             <Dmodel />
           </div>
         </div>
