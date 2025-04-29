@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Main = styled.div`
 .spline canvas{
   width :100% !important;
-  height: 600px !important;
+  height: ${(props) => props.height || '600px'} !important;
   pointer-events: none !important;
 }
 `

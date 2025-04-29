@@ -30,8 +30,10 @@ const Hero = () => {
     tl.fromTo(".two", 
       {opacity: 1,
         y: -50,
-        right:"5%", 
-        top:"-50px !important",// Slightly less movement for smoother effect
+        right:"5%",
+        yPercent:0, 
+        top:"-80px !important",
+        // Slightly less movement for smoother effect
         duration: 1,
         ease: "power2.out", }, // starting position
       { opacity: 1,
@@ -39,12 +41,11 @@ const Hero = () => {
         top:"520px",
         right:"50%",
         xPercent: 50,
+        yPercent:20,
         duration: 1,
         ease: "power2.out",   } // end position
     );
-    setTimeout(() => {
-      ScrollTrigger.refresh(); // 👈 Refresh after 0.5s
-    }, 500);
+  
   }, []);
 
   return (
