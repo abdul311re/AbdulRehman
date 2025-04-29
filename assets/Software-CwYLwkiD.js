@@ -1,4 +1,4 @@
-import{j as e,F as p,c as x,r as a,A as y}from"./index-Dd6Xm0J6.js";import{d as m}from"./styled-components.browser.esm-C05G31If.js";import{S as N}from"./scrollAnimation.min-ZX_B0FCg.js";/* empty css                */import{B as S}from"./Breadcrumb-DbNnIWSc.js";import{S as C,a as A}from"./splide-default.min-BGuDaqWI.js";const k="/AbdulRehman/assets/Softwarehero-nJp8-yK_.png",F=[{label:"Home",href:"/"},{label:"Services"},{label:"Software Development",href:"/Software"}],z=m.div`
+import{j as e,F as p,c as x,r as a,A as y}from"./index-C75DejuE.js";import{d as m}from"./styled-components.browser.esm-Dj0gv8kg.js";import{S as N}from"./scrollAnimation.min-BFOpKdIl.js";/* empty css                */import{B as S}from"./Breadcrumb-B2ruBF8v.js";import{S as C,a as A}from"./splide-default.min-Cd3thsgm.js";const k="/AbdulRehman/assets/Softwarehero-nJp8-yK_.png",F=[{label:"Home",href:"/"},{label:"Services"},{label:"Software Development",href:"/Software"}],z=m.div`
     display:flex;
     align-items:center;
     justify-content:center;
