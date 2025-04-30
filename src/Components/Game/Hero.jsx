@@ -35,7 +35,8 @@ const Hero = () => {
         y: -50,
         right: "5%",
         yPercent: 0,
-        top: "-80px",
+        top: "-80px !important",
+        ease: "power2.in",
       },
       {
         opacity: 1,
@@ -45,14 +46,14 @@ const Hero = () => {
         xPercent: 50,
         yPercent: 20,
         duration: 1,
-        ease: "power2.out",
+        ease: "power2.in",
       }
     ).to(".two", {
       top: "1040px",
       duration: 1,
       xPercent: 50,
       yPercent: 20,
-      ease: "power2.out"
+      ease: "power2.in"
     });
     
     setTimeout(() => {
