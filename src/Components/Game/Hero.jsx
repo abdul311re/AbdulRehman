@@ -41,7 +41,7 @@ const Hero = () => {
       {
         opacity: 1,
         y: 0,
-        top: "400px",
+        top: "400px !important",
         right: "50%",
         xPercent: 50,
         yPercent: 20,
@@ -60,7 +60,13 @@ const Hero = () => {
       ScrollTrigger.refresh(); // 👈 Refresh after 0.5s
     }, 500);
   }, []);
-
+  const hero = [
+    { h4:'Web Gaming', content: 'Creating engaging web-based games that deliver excitement and interactivity directly through browsers, anytime, anywhere.' },
+    { h4:'Web Gaming', content: 'Prioritize fast load times, efficient use of resources, and low power consumption. Use streamlined code, reduce memory footprint, and fine-tune APIs to deliver a seamless, responsive experience that boosts user satisfaction and encourages long-term engagement.' },
+    { h4:'Web Gaming', content: 'Prioritize fast load times, efficient use of resources, and low power consumption. Use streamlined code, reduce memory footprint, and fine-tune APIs to deliver a seamless, responsive experience that boosts user satisfaction and encourages long-term engagement.' },
+    { h4:'Web Gaming', content: 'Prioritize fast load times, efficient use of resources, and low power consumption. Use streamlined code, reduce memory footprint, and fine-tune APIs to deliver a seamless, responsive experience that boosts user satisfaction and encourages long-term engagement.' },
+    
+  ];
   return (
     <>
       <div className="relative">
@@ -109,9 +115,19 @@ const Hero = () => {
         </div>
 
         {/* Scroll Section */}
-        <div className="h-[900px] bg-black">
-          <div></div>
-          <div></div>
+        <div className="h-[900px] bg-black flex md:pl-10 lg:pl-28 lg:pr-16 px-2 md:px-0 pr-10 md:pt-20 pt-12 lg:pt-36 justify-between">
+          <div className="basis-1/3" >
+            <div style={{ top: '100px'}} className="sticky" >
+          <h3 className="text-white text-2xl font-bold">Seamless Gaming Across All Devices and Screen Sizes</h3>
+          <p className="text-white text-sm pt-5">At AR, we create top-performing games optimized for all screen sizes and platforms, ensuring a smooth experience that reaches players wherever they are.</p>
+          </div> 
+          </div>
+          <div className="basis-1/3 flex flex-col gap-5">
+          {hero.map((item, index) => (
+          <div className=" text-white"   key={index}>
+          <h4>{item.h4}</h4>
+          <p>{item.content}</p></div>))}
+          </div>
         </div>
       </div>
     </>
