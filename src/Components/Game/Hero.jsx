@@ -41,7 +41,7 @@ const Hero = () => {
       {
         opacity: 1,
         y: 0,
-        top: "400px !important",
+        top: "350px ",
         right: "50%",
         xPercent: 50,
         yPercent: 20,
@@ -49,7 +49,7 @@ const Hero = () => {
         ease: "power2.in",
       }
     ).to(".two", {
-      top: "1040px",
+      top: "400px",
       duration: 1,
       xPercent: 50,
       yPercent: 20,
