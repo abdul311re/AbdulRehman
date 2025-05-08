@@ -36,24 +36,24 @@ const Hero = () => {
         right: "5%",
         yPercent: 0,
         top: "-80px !important",
-        ease: "power2.in",
+        ease: "power2.out",
       },
       {
         opacity: 1,
         y: 0,
-        top: "350px ",
+        top: "320px ",
         right: "50%",
         xPercent: 50,
-        yPercent: 20,
+        yPercent: 10,
         duration: 1,
-        ease: "power2.in",
-      }
-    ).to(".two", {
-      top: "400px",
+        ease: "power2.out",
+        
+      },
+    )
+    tl.to(".two", {
+      top: "620px",
       duration: 1,
-      xPercent: 50,
-      yPercent: 20,
-      ease: "power2.in"
+      ease: "power2.out",
     });
     
     setTimeout(() => {
@@ -115,16 +115,16 @@ const Hero = () => {
         </div>
 
         {/* Scroll Section */}
-        <div className="h-[900px] bg-black flex md:pl-10 lg:pl-28 lg:pr-16 px-2 md:px-0 pr-10 md:pt-20 pt-12 lg:pt-36 justify-between">
+        <div className="h-[900px] bg-black flex md:pl-10 lg:pl-20 lg:pr-16 px-2 md:px-0 pr-10 md:pt-20 pt-12 lg:pt-16 justify-between">
           <div className="basis-1/3" >
             <div style={{ top: '100px'}} className="sticky" >
           <h3 className="text-white text-2xl font-bold">Seamless Gaming Across All Devices and Screen Sizes</h3>
           <p className="text-white text-sm pt-5">At AR, we create top-performing games optimized for all screen sizes and platforms, ensuring a smooth experience that reaches players wherever they are.</p>
           </div> 
           </div>
-          <div className="basis-1/3 flex flex-col gap-5">
+          <div className="basis-1/3 flex flex-col gap-10">
           {hero.map((item, index) => (
-          <div className=" text-white"   key={index}>
+          <div className=" text-white bg-white bg-opacity-10 py-2  md:px-10 px-3"   key={index}>
           <h4>{item.h4}</h4>
           <p>{item.content}</p></div>))}
           </div>

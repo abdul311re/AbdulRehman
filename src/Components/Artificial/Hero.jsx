@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -8,7 +7,7 @@ export default function ComponentOne() {
 
   // Move paragraph down and fade it out as you scroll
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 200]);
 
   return (
     <div ref={ref} className="h-screen bg-blue-200 flex items-center justify-center">
