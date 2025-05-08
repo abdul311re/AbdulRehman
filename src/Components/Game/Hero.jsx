@@ -28,30 +28,29 @@ const Hero = () => {
         
       },
     });
-
-    tl.fromTo(".two", 
-      {
-        opacity: 1,
-        y: -50,
-        right: "5%",
-        yPercent: 0,
-        top: "-80px !important",
-        ease: "power2.out",
-      },
-      {
-        opacity: 1,
-        y: 0,
-        top: "320px ",
-        right: "50%",
-        xPercent: 50,
-        yPercent: 10,
-        duration: 1,
-        ease: "power2.out",
-        
-      },
-    )
     tl.to(".two", {
-      top: "620px",
+      top: "-80px", // Position A 
+      duration: 1,
+      right: "5%",
+      xPercent: 0,
+      yPercent: 0,
+      ease: "power2.out",
+    })
+    .to(".two", {
+      top: "320px", // Position B (pause here)
+      duration: 1,
+      right: "50%",
+      xPercent: 50,
+      yPercent: 10,
+      ease: "power2.out",
+    })
+    .to(".two", {
+      top: "620px", // Position C (pause here)
+      duration: 1,
+      ease: "power2.out",
+    })
+    .to(".two", {
+      top: "800px", // Final Position D
       duration: 1,
       ease: "power2.out",
     });
