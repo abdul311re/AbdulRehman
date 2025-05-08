@@ -22,14 +22,14 @@ const Hero = () => {
       scrollTrigger: {
         trigger: ".two",
         start: "top center",
-        end: "bottom center",
+        end: "+=2000", // Adjust for smoother pacing
         scrub: 1,
         markers: false,
         
       },
     });
     tl.to(".two", {
-      top: "-80px !important", // Position A 
+      top: "-80px ", // Position A 
       duration: 1,
       right: "5%",
       xPercent: 0,
