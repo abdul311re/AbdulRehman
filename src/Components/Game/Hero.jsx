@@ -29,7 +29,7 @@ const Hero = () => {
       },
     });
     tl.to(".two", {
-      top: "-80px", // Position A 
+      top: "-80px !important", // Position A 
       duration: 1,
       right: "5%",
       xPercent: 0,
@@ -37,7 +37,7 @@ const Hero = () => {
       ease: "power2.out",
     })
     .to(".two", {
-      top: "320px", // Position B (pause here)
+      top: "320px !important", // Position B (pause here)
       duration: 1,
       right: "50%",
       xPercent: 50,
@@ -45,12 +45,12 @@ const Hero = () => {
       ease: "power2.out",
     })
     .to(".two", {
-      top: "620px", // Position C (pause here)
+      top: "620px !important", // Position C (pause here)
       duration: 1,
       ease: "power2.out",
     })
     .to(".two", {
-      top: "800px", // Final Position D
+      top: "800px !important", // Final Position D
       duration: 1,
       ease: "power2.out",
     });
