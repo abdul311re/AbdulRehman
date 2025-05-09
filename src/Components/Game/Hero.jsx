@@ -29,7 +29,7 @@ const Hero = () => {
         top: "-80px ", // Position A
       },
     });
-    tl.to(".two", {
+    tl.from(".two", {
       top: "-80px ", // Position A 
       duration: 1,
       right: "5% ",
