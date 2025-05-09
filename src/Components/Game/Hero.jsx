@@ -25,7 +25,7 @@ const Hero = () => {
         end: "+=2000", // Adjust for smoother pacing
         scrub: 1,
         markers: false,
-        right: "5%",
+        right: "5% !important",
         top: "-80px ", // Position A
       },
     });
