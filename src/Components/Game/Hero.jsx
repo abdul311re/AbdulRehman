@@ -25,14 +25,14 @@ const Hero = () => {
         end: "+=2000", // Adjust for smoother pacing
         scrub: 1,
         markers: false,
-        right: "5% !important",
+        right: "5% ",
         top: "-80px ", // Position A
       },
     });
     tl.to(".two", {
       top: "-80px ", // Position A 
       duration: 1,
-      right: "5%",
+      right: "5% !important",
       xPercent: 0,
       yPercent: 0,
       ease: "power2.out",
