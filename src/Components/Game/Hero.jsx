@@ -113,7 +113,7 @@ const Hero = () => {
           </div>
 
           {/* Right Section (Animated Model) */}
-          <div className="two absolute ">
+          <div className="two absolute right-0 ">
             <Dmodel />
           </div>
         </div>
