@@ -32,7 +32,7 @@ const Hero = () => {
     tl.to(".two", {
       top: "-80px ", // Position A 
       duration: 1,
-      right: "5% !important",
+      right: "5% ",
       xPercent: 0,
       yPercent: 0,
       ease: "power2.out",
