@@ -25,7 +25,8 @@ const Hero = () => {
         end: "+=2000", // Adjust for smoother pacing
         scrub: 1,
         markers: false,
-        
+        right: "5%",
+        top: "-80px ", // Position A
       },
     });
     tl.to(".two", {
@@ -41,18 +42,22 @@ const Hero = () => {
       duration: 1,
       right: "50%",
       xPercent: 50,
-      yPercent: 10,
+      yPercent: 30,
       ease: "power2.out",
     })
     .to(".two", {
       top: "620px ", // Position C (pause here)
       duration: 1,
+      xPercent: 50,
+      yPercent: 50,
       ease: "power2.out",
     })
     .to(".two", {
       top: "800px ", // Final Position D
       duration: 1,
       ease: "power2.out",
+      xPercent: 50,
+      yPercent: 50,
     });
     
     setTimeout(() => {
