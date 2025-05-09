@@ -21,7 +21,7 @@ const Hero = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".two",
-        start: "top center",
+        start: "top",
         end: "+=2000", // Adjust for smoother pacing
         scrub: 1,
         markers: false,
