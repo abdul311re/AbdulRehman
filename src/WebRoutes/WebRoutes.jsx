@@ -10,7 +10,6 @@ const Aboutus = lazy(() => import('../Pages/Website/Aboutus.jsx'));
 const Software = lazy(() => import('../Pages/Website/Software.jsx'));
 const Mobile = lazy(() => import('../Pages/Website/Mobile.jsx'));
 const Game = lazy(() => import('../Pages/Website/Game.jsx'));
-const Model = lazy(() => import('../Pages/Website/Model.jsx'));
 const Artificial = lazy(() => import('../Pages/Website/Artificial.jsx'));
 const WebRoutes = () => {
 
@@ -38,7 +37,6 @@ const WebRoutes = () => {
         <Route path='/Mobile' element={<Mobile />} />
         <Route path='/Game' element={<Game />} />
         <Route path='/Artificial' element={<Artificial />} />
-        <Route path='/Model' element={<Model />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
