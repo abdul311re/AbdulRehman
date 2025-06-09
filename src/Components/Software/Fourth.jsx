@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import styled from 'styled-components';
 import AnimatedCounter from "../Counter.jsx"
-import AR from "../../Assets/Arlogo.png";
+import AR from "../../Assets/ArLogo.png";
 const Deiv= styled.div`
 .splide__pagination {
     display:none;
