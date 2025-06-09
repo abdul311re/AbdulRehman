@@ -3,7 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAnglesRight} from '@fortawesome/free-solid-svg-icons';
-import Arlogo from '../../Assets/Arlogo.png'; 
+import Arlogo from '../../Assets/ArLogo.png'; 
 function Model(){
   return (<>
   <div className="md:flex bg-black">
