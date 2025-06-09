@@ -5,7 +5,7 @@ import "../../App.css";
 import Arlogo from '../../Assets/ArLogo.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import Breadcrumb from "../Breadcrumb.jsx";
 import {
   Card,
@@ -14,14 +14,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+} from "@/Components/ui/card";
+import { Input } from "@/Components/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/tabs";
+} from "@/Components/ui/tabs";
 import styled from 'styled-components';
 const Styledcol = styled.div`
 .text-card-foreground{
