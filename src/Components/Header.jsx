@@ -27,7 +27,8 @@ const products = [
   { name: 'Engagement', description: 'Speak directly to your customers', href: '#',  },
   { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', },
   { name: 'Integrations', description: 'Connect with third-party tools', href: '#', },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', },
+  { name: 'Automations', description: 'Build strategic funnels that will convert', Route:'/Get-a-Quote' },
+  { name: 'Quotation', description: 'Get a Quote', href: '#', Route:'/Get-a-Quote'},
 ]
 const Services = [
   { name: 'Website Development' , 
@@ -281,9 +282,9 @@ export default function Header() {
     /></div>
   </div>
 
-  {/* Services Section */}
+  {/* Product Section */}
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:w-full h-full xl:mx-5 mb-5 divide-y divide-gray-200 ">
-    {Services.map((item, index) => (
+    {products.map((item, index) => (
       <div
         key={index}
         className=" group  pt-5  px-4"
@@ -294,8 +295,9 @@ export default function Header() {
         >
           {item.name}
         </Link>
-        {/* Subservices */}
-        {item.subServices && (
+        <Link to={item.Route} className='mt-5 text-sm'>{item.description}</Link>
+       {/* Subservices */}
+        {/* {item.subServices && (
           <ul className="list-none pl-0 mt-2 space-y-1">
             {item.subServices.map((sub, subIndex) => (
             <li key={subIndex} className=" text-sm text-hex hover:underline hover:text-charcoal opacity-60">
@@ -306,7 +308,7 @@ export default function Header() {
           </li>
             ))}
           </ul>
-        )}
+        )} */}
       </div>
     ))}
   </div>

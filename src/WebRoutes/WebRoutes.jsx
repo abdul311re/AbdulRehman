@@ -11,6 +11,7 @@ const Software = lazy(() => import('../Pages/Website/Software.jsx'));
 const Mobile = lazy(() => import('../Pages/Website/Mobile.jsx'));
 const Game = lazy(() => import('../Pages/Website/Game.jsx'));
 const Artificial = lazy(() => import('../Pages/Website/Artificial.jsx'));
+const Quotation = lazy(() => import('../Pages/Website/Quotation.jsx'));
 const WebRoutes = () => {
 
   return (
@@ -37,6 +38,7 @@ const WebRoutes = () => {
         <Route path='/Mobile' element={<Mobile />} />
         <Route path='/Game' element={<Game />} />
         <Route path='/Artificial' element={<Artificial />} />
+        <Route path='/Get-a-Quote' element={<Quotation />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
